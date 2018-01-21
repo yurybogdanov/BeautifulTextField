@@ -202,6 +202,10 @@ import UIKit
     
     // MARK: - Overrides
     
+    open override func layoutSubviews() {
+        updateBorder()
+    }
+    
     open override func textRect(forBounds bounds: CGRect) -> CGRect {
         let rect = super.textRect(forBounds: bounds)
         let offsetY: CGFloat
